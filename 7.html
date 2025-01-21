@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather App</title>
+    <link rel="stylesheet" href="Ba.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Weather</h1>
+        <div class="tab-container">
+            <p class="tab">Your weather</p>
+            <p class="tab">Search Weather</p>
+
+        </div>
+        <div class="weather-container">
+            <div class="grant-location-container sub-container">
+                <img src="./asset/location.png" width="80" height="80" loading="lazy" alt="location">
+                <p>grant location access</p>
+                <p data-messageText>>allow access to get weather info</p>
+<button class="btn" data-grantAccess>grantacess</button>
+            </div>
+            <form class="form-container" data-searchform>
+                <input type="text" placeholder="Search for city..." data-searchinp>
+                <button class="btn" type="submit">
+                    <img src="./asset/search.png" width="20" height="20" alt="search">
+                </button>
+            </form>
+            <div class="sub-container loading-container">
+                <img src="./asset/loading.gif" width="150" height="150" alt="loading">
+<p>Loading</p>
+            </div>
+            <div class="sub-container user-info-container">
+                <div class="name">
+                    <p data-cityName></p>
+                    <img crossorigin="anonymous" data-countryIcon>
+                </div>
+                <p data-weather></p>
+                <img data-weatherIcon>
+                <p data-temp>
+                    <div class="parameter-container">
+                        <div class="parameter">
+                            <img src="./asset/wind.png" alt="">
+                          <p class="parameter-title">windspeed</p>
+                          <p class="parameter-value" data-windspeed></p>
+                        </div>
+                        <div class="parameter">
+                            <img src="./asset/humidity.png" alt="">
+                          <p class="parameter-title">humidity</p>
+                          <p class="parameter-value" data-humidity></p>
+                       
+                    </div>
+                    <div class="parameter">
+                        <img src="./asset/cloud.png" alt="">
+                      <p class="parameter-title">cloud</p>
+                      <p class="parameter-value" data-cloud></p>
+                   
+                </p>
+            </div>
+            </div>
+            <div class="sub-container api-error-container">
+                <img src="./asset/not-found.png" alt="" data-notfoundImg>
+                <p data-api-errorText></p>
+                <button class="btn" data-apiError>Retry</button>
+            </div>
+        </div>
+    </div>
+    <script src="c.js"></script>
+</body>
+</html>
